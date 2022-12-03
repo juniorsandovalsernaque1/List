@@ -299,7 +299,7 @@ def push(body):
     if FEISHU_TOKEN == '' :
         print('*** No FEISHU_TOKEN ***')
     else: 
-        fsbody = urlBase + ' - ' + username + '\n\n' + body       
+        fsbody = urlBase + '\n\n' + body       
         server = 'https://open.feishu.cn'
         fsurl = server + '/open-apis/bot/v2/hook/' + FEISHU_TOKEN
         rq_fs = requests.post(fsurl, data=json.dumps({"msg_type":"text","content":{"text": fsbody}}), headers={
